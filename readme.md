@@ -1,12 +1,10 @@
 #123website builder
 
-an experimental static website builder based on Silex and Powered by Nodejs
+an experimental static website builder based on Silex and Powered by Nodejs. [live demo](https://mj123website.herokuapp.com/)
 
 ##Installation on your local computer
 
-This is for developers only, since our beloved designers can use the [online version](http://editor.silex.me/).
-
-Developers you can clone this repository and start Silex, with nodejs. See instructions bellow.
+This is for developers only, since our beloved designers can use the [online version](https://mj123website.herokuapp.com/).
 
 ### Recommended: with Docker
 
@@ -47,37 +45,7 @@ Start the server and then open [http://localhost:6805/](http://localhost:6805/) 
 $ npm start
 ```
 
-> Note for [cloud9](http://c9.io) users: you may want to activate python with this command:
-
-```
-$ nada-nix install python
-```
-
 And finally, take a look at the "available commands" section bellow
-
-### local installation on Windows
-
-> instructions provided by Régis RIGAUD:)
-
-Prerequisite:
-
-* [node.js](http://nodejs.org/) installed
-* Git Client installed (e.g. [windows github client](http://windows.github.com/))
-* [NPM installed](https://npmjs.org/)
-* [python](https://www.python.org/downloads/)
-
-Installation of Silex:
-
-* Launch the "Git Shell"
-* Create a complete clone of Silex Project: git clone --recursive https://github.com/mhadaily/123website-builder.git
-* Go to Silex's Directory.
-* install depedencies : npm install
-
-Start Silex:
-
-* Launch Silex from a command prompt (Silex's Directory): `npm start`
-* Open your favorite browser on http://localhost:6805/ and ENJOY !!!
-* also take a look at the "available commands" section bellow
 
 ### Available commands
 
