@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  123website:
+    container_name: 123website_builder_dev
+    build: .
+    command: npm run watch:client
+    ports:
+       - 6805:6805
+    volumes:
+       - .:/123website
+       - 123web-deps:/123website/node_modules
+
+volumes:
+  123web-deps:

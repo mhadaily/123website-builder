@@ -1,0 +1,12 @@
+{
+  "apps" : [{
+    "name"        : "Silex",
+    "script"      : "dist/server/server.js",
+    "watch"       : "dist/server/",
+    "env": {
+      "NODE_ENV": "production",
+      "GITHUB_CLIENT_ID": "",
+      "GITHUB_CLIENT_SECRET": ""
+    }
+  }]
+}

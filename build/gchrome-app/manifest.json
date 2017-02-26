@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "123website, live web creation",
+    "version": "2.2.4.0",
+    "description": "Website builder, free and open source, for web designers to create beautiful meaningful websites. HTML5 & CSS3 with ❤.",
+    "icons": {
+        "128": "silex128.png"
+    },
+    "author": "123website Labs",
+    "homepage_url": "http://www.majidhajian.com/",
+    "offline_enabled": false,
+    "short_name": "123website",
+    "app": {
+      "urls": [
+        "http://editor.123website.io/"
+      ],
+      "launch": {
+        "web_url": "http://editor.123website.io/"
+      }
+    }
+}

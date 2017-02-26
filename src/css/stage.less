@@ -1,0 +1,47 @@
+.silex-stage-iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  border: none;
+}
+
+.silex-stage {
+  background-color: @silexdarkgrey;
+  position: absolute;
+  top: @contextMenuHeight;
+  bottom: @breadCrumbsHeight;
+  left: @menuWidth;
+  right: @propertiesToolWidth;
+}
+
+
+.silex-stage iframe{
+  transition: opacity 0.1s linear;
+}
+
+.silex-stage.loading-website iframe{
+  transition: none;
+  opacity: .001;
+}
+
+.silex-stage.loading-website {
+  background-image: url(../assets/image-loader.gif);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.silex-stage.loading-website-light iframe{
+}
+
+.mobile-mode {
+  .silex-stage-iframe {
+    max-width: @mobileStageWidth;
+    position: initial;
+  }
+  .silex-stage {
+    text-align: center;
+    background-image: url('../assets/stripe.png');
+    background-color: @silexlightgrey;
+  }
+}

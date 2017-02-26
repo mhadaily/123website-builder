@@ -1,0 +1,476 @@
+/* "apollo mode" UI */
+.advanced-mode-on .silex-property-tool .switch-apollo-mode button:after {
+  content: '\f205';
+}
+.silex-property-tool {
+  color: @silexlightergrey;
+  position: fixed;
+  right: 0;
+  left: @propertiesToolWidth;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  bottom: 0;
+  background-color: @silexmediumgrey;
+  margin-top: @contextMenuHeight;
+  font-size: small;
+  hr {
+    border-style: groove;
+    margin: 7px 10px 3px;
+  }
+  .combobox {
+    line-height: 16px;
+  }
+  .main-container {
+    padding: 0;
+    padding-top: 5px;
+    width: 97%;
+    border-bottom: 1px solid #2F2F2F;
+
+    /* size set by workspace.js when the user resizes the property tool */
+    &.size1 {
+      -webkit-column-count: 1;
+    	-moz-column-count: 1;
+    	-o-column-count: 1;
+    	-ms-column-count: 1;
+    	column-count: 1;
+    }
+
+    &.size2 {
+      -webkit-column-count: 2;
+    	-moz-column-count: 2;
+    	-o-column-count: 2;
+    	-ms-column-count: 2;
+    	column-count: 2;
+    }
+
+    &.size3 {
+      -webkit-column-count: 3;
+    	-moz-column-count: 3;
+    	-o-column-count: 3;
+    	-ms-column-count: 3;
+    	column-count: 3;
+    }
+
+    input {
+      display: inherit;
+      height: 22px;
+      overflow: hidden;
+      margin: 4px 0;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+        border: 1px solid @silexdarkgrey;
+      }
+    }
+    > span {
+      clear: both;
+    }
+
+  }
+
+  fieldset {
+    margin: 15px 0;
+    border: 1px solid @silexlightergrey;
+    width: 90%;
+    display: inline;
+  }
+
+  /* only the inline editor stays 100% width */
+  fieldset.style-property {
+    max-width: none;
+  }
+
+  .help-icon {
+    color: #a9a9a9;
+    font-size: medium;
+    margin-left: 10px;
+  }
+
+  .xsmall-font {
+    font-size: 13px;
+    font-weight: lighter;
+    color: #FFF;
+    line-height: 22px;
+  }
+
+  .xsmall-font.view-on-mobile-label {
+        line-height: 1;
+    }
+
+  .goog-menu-button-caption {
+    padding: 0;
+  }
+
+  .color-button {
+    display: block;
+    width: 20px;
+    float: left;
+
+    .goog-inline-block {
+      display: block;
+    }
+
+  }
+
+  .image-url-input {
+    float: left;
+    margin-top: 2px;
+    width: 185px;
+  }
+
+  .pages-container {
+
+    .page-label {
+      vertical-align: middle;
+      overflow: hidden;
+      width: 170px;
+      text-overflow: ellipsis;
+      display: block;
+      white-space: nowrap;
+    }
+
+    .page-check-container {
+
+      .page-check {
+
+        span {
+          float: left;
+          margin-top: 5px;
+        }
+
+      }
+
+    }
+
+  }
+  .expandable {
+    margin-top: -4px;
+    display: inline-block;
+    width: 100%;
+    legend, .expandable-legend {
+      background-color: @silexmediumgrey;
+      font-weight: 700;
+      font-size: 13px;
+      padding-top: 8px;
+      padding-left: 8px;
+      cursor: default;
+      line-height: 2;
+      width: 100%;
+      cursor: pointer;
+      border-top: 1px solid @silexdarkgrey;
+      .fa {
+        margin-right: 5px;
+      }
+    }
+    .body {
+      margin: 0;
+      margin-top: 5px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height @silexUiTransitions;
+    }
+    &.expanded .body {
+      max-height: inherit;
+      margin: 10px;
+    }
+  }
+
+  .goog-checkbox {
+    float: left;
+    margin-top: 3px;
+    margin-left: 10px;
+  }
+
+  .tab-page {
+    .border-placement-container {
+      border-bottom: 1px solid @silexdarkgrey;
+      margin-bottom: 5px;
+      padding-bottom: 15px;
+    }
+
+    label.corner-placement-label,
+    label.border-placement-label {
+      display: block;
+      width: 100%;
+      margin: 0;
+      line-height: 22px;
+    }
+
+    .half-col {
+        display: inline-block;
+        width: 45%;
+      }
+
+  }
+
+  .background-property {
+    line-height: 22px;
+
+    .color-button {
+
+      .goog-menu-button-inner-box {
+        padding: 2px;
+      }
+
+    }
+
+  }
+
+  .background-editor {
+    .background-image {
+
+      .button {
+        font-size: smaller;
+        .goog-custom-button-outer-box {
+          width: 90px;
+
+          .goog-custom-button-inner-box {
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 82px;
+            font-size: small;
+          }
+
+        }
+
+      }
+
+      .goog-menu-button {
+
+        .goog-menu-button-outer-box {
+          width: 90px;
+
+          .goog-menu-button-inner-box {
+            padding-top: 0;
+            padding-bottom: 0;
+            width: 82px;
+
+            .goog-menu-button-caption {
+              width: 70px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .opacity-input {
+    width: 91px;
+  }
+
+  .goog-color-menu-button-indicator {
+    font-size: 12px;
+    border-bottom-width: 10px;
+  }
+
+  .goog-hsva-palette-sm-input {
+    font-size: 13px;
+  }
+
+  fieldset {
+    margin-bottom: 10px;
+  }
+
+  .position-editor {
+
+    label {
+      float: left;
+      margin: 5px 5px 5px 0px;
+      width: 10px;
+      text-align: right;
+      color: @silexlightergrey;
+      font-size: 11px;
+    }
+    .two-col label,
+    .two-col input {
+      width: 42%;
+      margin: 5px;
+      text-align: left;
+    }
+
+    .right-bottom {
+      width: 25px;
+    }
+
+    .z-index-label {
+      text-align: center;
+      width: 69px;
+    }
+
+    .new-line {
+      clear: left;
+    }
+    .input-with-unit {
+      display: inline-block;
+      width: 44%;
+      margin: 0px 10px 0px 0;
+      label.unit {
+        font-size: 70%;
+        margin-left: 0;
+        margin-top: 0;
+        padding: 4px;
+        width: 0;
+      }
+      input {
+        width: 75%;
+        float: left;
+        font-size: 12px;
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+
+  .goog-hsva-palette-sm {
+    overflow: hidden;
+    width: 210px;
+  }
+
+  .link-small-btn {
+    color: blue;
+    cursor: pointer;
+  }
+
+  .link-combo-box {
+    font-size: small;
+    width: 100%;
+  }
+
+  .page-container {
+    margin: 4px 0;
+  }
+
+  .title1 {
+    color: @silexlightergrey;
+    margin: 0;
+    font-weight: bold;
+    padding: 10px 0 0 19px;
+    height: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: @silexmediumgrey;
+  }
+
+  .goog-tab-bar {
+    background-color: transparent;
+    padding-left: 1px;
+
+    .goog-tab-selected {
+      background-color: #f3f3f3;
+    }
+
+  }
+
+  .link-small-btn:hover {
+    text-decoration: underline;
+  }
+
+  .element-style-editor{
+    margin-top: 10px;
+    height: 400px;
+  }
+
+  .opacity-property {
+
+    .opacity-input {
+      width: 52px;
+    }
+
+  }
+
+
+  .border-property {
+
+    .border-width-color-container {
+      float: left;
+      width: 100%;
+
+      label {
+        margin: 8px;
+        float: left;
+      }
+
+      input.border-width-input {
+        width: 52px;
+        float: left;
+        margin-left: 4px;
+      }
+
+      .border-color-button {
+        margin-top: 7px;
+
+        .goog-menu-button-inner-box {
+          padding: 2px;
+        }
+
+      }
+
+    }
+
+    .border-type-conainer {
+      float: left;
+      width: 100%;
+
+      div.border-type-label {
+        float: left;
+        margin: 8px;
+      }
+
+      .border-type-combo-box {
+        background: #FFF;
+        margin-top: 5px;
+        margin-left: 12px;
+
+        .goog-menu-button-caption {
+          padding-right: 10px;
+        }
+
+      }
+
+    }
+
+    .border-radius-container {
+
+      .border-radius-width-container {
+        float: left;
+        width: 100%;
+        margin: 5px 0;
+
+        label.border-radius-label {
+          float: left;
+          margin: 8px;
+        }
+
+        input.corner-radius-input {
+          width: 52px;
+          float: left;
+        }
+
+      }
+
+    }
+  }
+  .component-editor {
+    .expandable;
+    border-top: 1px solid @silexdarkgrey;
+    &.hide-panel {
+      display: none;
+    }
+    & > section > ul {
+      padding-left: 0;
+    }
+    label {
+      .expandable-legend;
+      display: block;
+      padding-bottom: 5px;
+    }
+  }
+
+}
